@@ -22,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickPhrase(View view) {
         TextView textView = findViewById(R.id.textView);
-        textView.setText("Все, что нам нужно - это "+Phraser.PhraserGen());
+        TextView tv_result = findViewById(R.id.tv_result);
+        textView.setText("Все, что нам нужно - это "+Phraser.PhraserGen(false));
+        tv_result.setText(Phraser.PhraserGen(true)+" - это всё, что нам нужно");
     }
 
 }
